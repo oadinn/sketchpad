@@ -58,10 +58,9 @@ document.getElementById('colorPicker').addEventListener('change', function() {
     currentColor = this.value;
 });
 document.getElementById('clear').addEventListener('click', () => activateClear())
-document.getElementById('16').addEventListener('click', () => changeGridSize(16))
-document.getElementById('32').addEventListener('click', () => changeGridSize(32))
-document.getElementById('64').addEventListener('click', () => changeGridSize(64))
-document.getElementById('100').addEventListener('click', () => changeGridSize(100))
+document.getElementById('grid-size').addEventListener('change', function() {
+    changeGridSize(this.value)
+})
 
 
 renderGrid()
