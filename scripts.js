@@ -71,6 +71,10 @@ document.getElementById('eraser').addEventListener('click', function() {
 })
 document.getElementById('color-picker').addEventListener('change', function() {
     currentColor = this.value;
+    document.querySelectorAll('button').forEach(btn => {
+        btn.style.background = 'transparent';
+        btn.style.color = 'black';
+    });
 });
 document.getElementById('clear').addEventListener('click', function() {
     activateClear()
